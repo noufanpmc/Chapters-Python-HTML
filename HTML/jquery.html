@@ -1,0 +1,25 @@
+<html>
+<head>
+	<style type="text/css">
+	table,th,td{
+		border:1px solid black;
+	}
+	</style>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+	</script>
+	<script>
+	$(document).ready(function(){
+		$("button").click(function(){
+			$("#myDiv").load("list2css.html");
+		});
+	});
+	</script>
+</head>
+<body>
+	<h2>Load Ajax by using JQUERY</h2>
+	<h3>Load a php page easly by using jQuery</h3>
+	<div id="myDiv">
+	</div>
+	<button type="button" name="button">Load b.php</button>
+</body>
+</html>

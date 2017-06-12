@@ -1,0 +1,77 @@
+<html>
+<head>
+	<title>Register</title>
+	<script type="text/javascript">
+	function validate_form()
+	{
+		/*alert("hello");*/
+		var name=document.getElementById("cname").value;
+		var male=document.getElementById("male").checked;
+		var female=document.getElementById("female").checked;
+		var branch=document.getElementById("cbranch").value;
+		var language1=document.getElementById("language1");
+		var language2=document.getElementById("language2");
+		var language3=document.getElementById("language3"); 
+		
+		if(name==""){
+			alert("Enter your name");
+			return false;
+
+		}
+	        if(!(male||female))
+	        {
+			alert("Select your gender");
+			return false;
+		    }
+		
+		if(branch=="none")
+		{
+			alert("Enter the branch");
+			return false;
+		}
+		if(!(language1.checked || language2.checked || language3.checked))
+		{
+			alert("Choose your language");
+			return false;
+		}	/*document.getElementById("label5").innerHTML="Select your branch";
+			validate=false;
+		}
+		else{
+			document.getElementById("label5").innerHTML="";
+		}
+		if(language1.checked==false && language2.checked==false && language3.checked==false)
+		{
+			document.getElementById("label6").innerHTML="Select Language";
+			validate=false;
+		}
+		else
+		{
+			document.getElementById("label6").innerHTML="";
+		}*/
+		
+	}
+
+	</script>
+</head>
+<body>
+	<h2 align="center">BAABTRA REGISTRATION</h2>
+	<form method="get" action="">
+	
+	<b>Enter Full Name:</b> <input type="text" name="cname" id="cname"  size="10" maxlength="10"><br>
+	<br>
+	<b>Gender:</b> <input type="radio" name="gender" id="male" value="Male">Male
+    <input type="radio" name="gender" id="female" value="Female">Female<br>
+    <br>
+    <b>Branch:</b> <select name="branch" id="cbranch">
+    <option value="none">Choose Branch</option>
+    <option value="HR">Human Resource</option>
+    <option value="M">Manager</option>
+    <option value="AM">Assistant Manager</option>
+    <option value"SM">Sales Manager</option>
+</select><br>
+<br>
+<b>Language Known:</b> <input type="checkbox" name="Malayalam" id="language1" value="Malayalam">Malayalam<input type="checkbox" name="English" id="language2" value="English">English<input type="checkbox" name="Tamil" id="language3" value="Tamil">Tamil<br><br>
+<input type=submit onClick="return validate_form()" name="cmdsubmit" value="submit"> 
+</form>
+</body>
+</html>

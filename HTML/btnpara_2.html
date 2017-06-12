@@ -1,0 +1,36 @@
+<html>
+<head>
+	<style type="text/css">
+    #p1{
+    	background: red;
+    }
+    #p2{
+    	background: blue;
+
+    }
+    #p3{
+    	background: green;
+    }
+    #p4{
+    	background: yellow;
+    }
+	</style>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+	</script>
+	<script>
+	$(document).read(function(){
+      $("btn1").click(function(){
+      	$("p1").css({'background':'yellow'});
+      });
+	});
+	</script>
+</head>
+<body>
+	<h3>This is a heading</h3>
+	<p id="p1">This is paragraph1</p>
+	<p id="p2">This is paragraph2</p>
+	<p id="p3">This is paragraph3</p>
+	<p id="p4">This is paragraph4</p>
+	<button id="btn1">click</button>
+</body>
+</html>

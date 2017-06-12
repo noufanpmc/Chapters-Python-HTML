@@ -1,0 +1,34 @@
+<html>
+<head>
+	<title>SUM</title>
+	<script type="text/javascript">
+	function add()
+	{ 
+		
+    var num1=parseInt(document.forms["ad"]["num1"].value);
+    var num2=parseInt(document.forms["ad"]["num2"].value);
+    
+    var num3=num1+num2;
+    alert(num3);
+   document.forms["ad"]["num1"].value=null;
+   document.forms["ad"]["num2"].value=null;
+          /* document.form["ad"]["numbr"].value = num3;*/
+      }
+ 
+
+	</script>
+</head>
+<body>
+	<form name="ad">
+	Enter the first number:<br>
+	<input type="text" name="num1" size="10"><br>
+
+	Enter the second number:<br>
+	<input type="text" name="num2" size="10"><br>
+
+	
+	<input type="button" value="add" onClick="add()">
+	</form>
+	
+</body>
+</htmL>
