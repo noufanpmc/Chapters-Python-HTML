@@ -1,0 +1,162 @@
+<html>
+<head>
+	<style type="text/css">
+	#main{
+		background-color: F1F1F1;
+		width: 100%;
+		height: 100%;
+	}
+     #img1{
+     	background: #3b5998;
+     	width: 85%;
+     	padding-left: 200px;
+     }
+     #img2{
+     	
+     	padding-left: 410px;
+     	margin-top: -50px;
+     }
+     #d1{
+     	width: 50%;
+     	height: 60%;
+     	margin-left: 350px;
+     	margin-top: 100px;
+     	background: white;
+     	font-family: arial;
+     	font-size: 20px;
+
+     	}     
+     	#l{
+            margin-top: -50px;
+     		color:  A8ADAB;
+     	}
+     	#txt1{
+     		margin-left: 150px;
+     		margin-top: -15px;
+     	}
+     	#txtb1{
+     		margin-left: 240px;
+     		margin-top: 10px;
+     	}
+     	#img3{
+     		margin-top: -35px;
+     		margin-left: 240px;
+     		width: 9%;
+     		height: 14%;
+     	}
+     	#txt2{
+     		margin-left: 140px;
+     	}
+     	#txtb2{
+     		margin-left: 240px;
+     		margin-top: -45px;
+     	}
+     	#txt3{
+     		margin-left: 257px;
+     		color:  A8ADAB;
+     		margin-top: -18px;
+     		font-size: 15px;
+     	}
+     	#cb{
+             margin-left: 240px;
+     	}
+     	#btn1{
+     		margin-left: 240px;
+     		background:#3b5998;
+     		color: white;
+
+     	}
+     	#txt4{
+     		color: blue;
+     		margin-left: 300px;
+     		margin-top: -20px;
+     		font-size: 18px;
+     	}
+     	#txt5{
+     		color: blue;
+     		margin-left: 240px;
+     		font-size: 15px;
+     	}
+     	#p1{
+     		margin-left: 240px;
+     		font-family: arial;
+     		font-size: 12px;
+     		color: #3b5998;
+     		margin-top: 40px;
+
+     	}
+     	#p2{
+     		margin-left: 320px;
+     		font-family: arial;
+     		font-size: 12px;
+     		margin-top: -50px;
+     		
+
+     	}
+     	.tooltip .tooltiptext {
+   
+    width: 25%;
+    background-color: white;
+    color: red;
+    text-align: left;
+    border-radius: 2px;
+    padding: 5px 0;
+    border: 1px solid red;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 250px;
+    left: 780px;
+}
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent red transparent transparent;
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+#p3{
+	margin-left: 89px;
+}
+#texb_email{
+	margin-left: 240px;
+	margin-top: -25px;
+	border: 1px solid red;
+}
+
+
+	</style>
+	<script type="text/javascript">
+
+	</script>
+</head>
+<body>
+	<div id="main">
+		<div id="img1"><img src="images/facebook_logo.png"></div>
+		<div id="img2"> <img  src="images/facebook_3.png"></div>
+		<div id="d1"><p><b><dd><br>Facebook Login</dd></br></b></p>
+			<dd><p id="l">_____________________________________________________</p></dd><br>
+			<div id="p3">Email or Phone:</div>
+			<div><input type='text' id='texb_email'></div>
+			
+			
+			<div><p id="txt2">Password:</p></div>
+			<div><input type="text" id="txtb2" size="20"></div>
+			<div class="tooltip"><br>
+            <span class="tooltiptext">The email address that you've entered does'nt match any account.<b> Sign up for an account</b></span>
+            </div>
+			<div><input type="checkbox" id="cb"><p id="txt3">Keep me logged in</p></div>
+			<div><button id="btn1">Log In</button></div>
+			<div><p id="txt4"> <font color="black">or</font> Sign up for Facebook</p></div>
+			<div><p id="txt5">Forgotten password?</p></div>
+			
+		</div>
+	</div>
+</body>
+</html>

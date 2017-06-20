@@ -1,0 +1,13 @@
+create table tbl_stock
+(
+pk_int_stock_id int auto_increment,
+vchr_name varchar(100), 
+int_quantity int,
+int_price int,
+primary key(pk_int_stock_id )
+);
+insert into tbl_stock(vchr_name ,int_quantity , int_price )
+values('adam', 10, 1000); 
+
+insert into tbl_stock(vchr_name,int_quantity,int_price)
+values('brad',5,500);

@@ -1,9 +1,6 @@
 <html>
 <head>
 	<style type="text/css">
-	table,th,td{
-		border:1px solid black;
-	}
 	#box{
 		width: 200px;
 		height: 200px;
@@ -15,13 +12,9 @@
 	</script>
 	<script>
 	$(document).ready(function(){
-		$(document).load(function(){
-			$("#box").css('background-color', 'blue');
-
-		});
-				$("button").click(function(){
-			$("#myDiv").load("colordivjq.html");
-		});
+		setTimeout(function(){
+			$("#box").css('background-color','blue');
+		},400);
 	});
 	</script>
 </head>

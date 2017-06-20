@@ -1,0 +1,277 @@
+<html>
+<head>
+	<style type="text/css">
+	#main{
+		background-color: F1F1F1;
+		width: 100%;
+		height: 100%;
+	}
+    #img_logo{
+     width:85.5%;
+     background-color:#3b5998;
+     height: 13.5%;
+     padding-left: 200px;
+
+
+    }
+    #p{
+    	text-align: 40px;
+    	margin-left: 230px;
+    	margin-top: 20px;
+    	font-family: arial;
+    	color: #3b5998;
+       
+
+    	
+    }
+    #p1{
+    	text-align: 40px;
+    	margin-left: 230px;
+    	font-family: arial;
+    	color: #3b5998;
+
+    }
+    #img2{
+    	 margin-left: 200px;
+
+    }
+    #txtb_usrnm{
+      margin-top: -320px;
+      margin-left: 800px;
+      height: 18px;
+
+    }
+    #txtb_pswd{
+    	margin-top: -320px;
+      margin-left: 1000px;
+      height: 18px;
+
+    }
+    #ep{
+    	margin-top: -338px;
+      margin-left: 800px;
+      color: DDE5E3;
+      font-size: 13px;
+    }
+    #ep1{
+    	margin-top: -30px;
+      margin-left: 1000px;
+      color: DDE5E3;
+      font-size: 13px;
+
+    }
+    #cb1{
+    	margin-left: 800px;
+    	margin-top: 12px;
+
+    }
+    #ep2{
+    	margin-top: -18px;
+      margin-left: 820px;
+      color: 889592;
+      font-size:13px; 
+    }
+    #ep3{
+    	margin-top: -29px;
+      margin-left: 1000px;
+      color: 889592;
+      font-size:13px; 
+    }
+    #btn_login{
+    	background-color: #3b5998;
+    	height: 18px;
+    	color: white;
+    	font-size: 11px;
+    	margin-top: -50px;
+    	margin-left: 1200px;
+
+    }
+    #p2{
+    	margin-left: 780px;
+    	margin-top: -270px;
+    	font-size: 30px;
+    	font-family: arial;
+
+    }
+    #p3{
+    	margin-left: 780px;
+    	margin-top: -20px;
+    	font-family: arial;
+
+    }
+    #txtb_fname{
+    	height: 30px; 
+     margin-left: 780px;
+
+    }
+    #txtb_sname{
+    	height: 30px;
+    }
+    #txtb_email{
+    	height: 30px;
+    	margin-left: 780px;
+    	margin-top: 10px;
+    }
+    #txtb_remail{
+    	height: 30px;
+    	margin-left: 780px;
+    	margin-top: 10px;
+    }
+    #txtb_npsswd{
+    	height: 30px;
+    	margin-left: 780px;
+    	margin-top: 10px;
+    }
+    #p4{
+    	height: 30px;
+    	margin-left: 780px;
+    	margin-top: 10px;
+    	font-family: arial;
+    	font-size: 20px;
+    }
+    #p5{
+        border: 1px solid blue;
+        margin-top: -10px;
+        margin-left: 960px;
+        margin-right: 250px;
+        height: 23px;
+        color: blue;
+        font-size: 10px;
+    }
+    .drp1{
+    	margin-top: 10px
+    	height: 33px;
+    }
+    .drp2{
+    	margin-top: 10px
+    	height: 33px;
+    }
+    .drp3{
+    	margin-top: 10px
+    	height: 33px;
+    }
+    .gender{
+    	margin-left: 777px;
+    	margin-top: 25px;
+
+    }
+    #p6{
+    	margin-left: 777px;
+    	font-size: 11px;
+    	color: #889592
+
+    }
+   #img3{
+   	margin-left: 777px;
+
+   }
+   #l{
+   	margin-left: 777px;
+   	color: #A8ADAB;
+   }
+   #p7{
+   		margin-left: 777px;
+   		margin-top: 20px;
+   		color: #A8ADAB;
+   }
+   #p8{
+   	background: white;
+   	margin-left: 100px;
+   	font-size: 14px;
+   }
+	</style>
+
+	
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		$("#btn_login").click(function(){
+			/*alert("hello");*/
+				password=$("#txtb_pswd").val();
+			username=$("#txtb_usrnm").val();
+			/*alert(username);
+			alert(password);*/
+			
+			 $.ajax({
+			 	type:"POST",
+			 	DataType:"jsonp",
+                 url:"http://services.trainees.baabtra.com/LoginService/login.php",
+                 data:{'email':username,'password': password},
+                success:function(data)
+		{
+			
+			var json = $.parseJSON(data);
+			console.log(json[0].Msg);
+			if(json[0].ResponseCode=="200")
+			{
+				//window.location.href="facebook2.html?email="+json[0].vchr_first_name+"&&name="+json[0].vchr_first_name;
+				window.location.href="projfb_3.html";
+
+			}
+			else if(json[0].ResponseCode=="500")
+			{
+				//window.location.href="fberror?email="+json[0].vchr_user_name+"&&name="+json[0].vchr_first_name;
+				window.location.href="projfb_2.html";
+			}
+			else
+			{
+				window.location.href="projfb_4.html";
+			}
+			console.log(json[0].ResponseCode)
+			//$("#contact").html(data);
+		},
+		error:function(error)
+		{
+			console.log(error);
+			alert(error);
+		}
+	});
+	});
+});
+	</script>
+    
+</head>
+<body>
+	<div id="main">
+	<div id="img_logo"><img align="center" src ="images\facebook_logo.png"></div>
+	<div id="p"><b> Facebook helps you to connect and share with the</b> 
+	<p id="p1"><b>people in your life.</p></b></div>
+    <div id="img2"><img src="images\facebook_1.png"></div>
+    <div><input type="text" id="txtb_usrnm" size="20" placeholder="username">
+    <input type="text" id="txtb_pswd" size="20" placeholder="password">
+    <p id="ep">Email or Phone</p>
+     <p id="ep1">Password</p>
+     <input type="checkbox" name="cb1" id="cb1">
+     <p id="ep2">Keep me logged in</p>
+     <p id="ep3">Forgotten your password?</p>
+     <button id="btn_login">Log In</button></div>
+     <div><p id="p2"><b>Create an account</b></p>
+     <p id="p3">It's free and always will be.</p>
+     <input type="text" id="txtb_fname" size="20" placeholder="First name">
+     <input type="text" id="txtb_sname" size="20" placeholder="Sur name"></div>
+     <div><input type="text" id="txtb_email" size="45" placeholder="Email or mobile number"></div>
+     <div><input type="text" id="txtb_remail" size="45" placeholder="Re-enter email or mobile number"></div>
+     <div><input type="text" id="txtb_npsswd" size="45" placeholder="New password"><br></div>
+     <div id="p4">Birthday<br>
+     <select name="drp1" class="drp1">
+     	<option value="dd">Day</option></select>
+     	<select name="drp2" class="drp2">
+     		<option value="mm">Month</option>
+     	</select>
+     	<select name="drp3" class="drp3">
+     		<option value="yy">Year</option>
+     	</select></div>
+     	<div id="p5">Why do I need to provide my <br>date of birth</div>
+     	<div><input type="radio"  name="gender" class="gender" value="Female">Female
+    <input type="radio" name="gender" class="gender1" value="Male">Male</div>
+    <div><p id="p6">By clicking Create an account, you agree to our <font color="blue">Terms</font> and that<br> read our <font color="blue">Data Policy</font>, including our <font color="blue">Cookie Use</font>.</p></div>
+    <div><input type="image" id="img3" src="images/facebook_2.png" alt="Submit"></div>
+    <div><p id="l">_______________________________________________</p></div>
+    <div><p id="p7"><font color="blue">Create a page</font> for celebrity, band or business.</p></div>
+    <div><p id="p8"><font color="blue">English(UK) മലയാളം தமிழ் ಕನ್ನಡ हिन्दीا ردو বাংলা తెలుగు Español Português(Brasil) Français(France)</font></p></div>
+
+
+
+	</div>
+</body>
+</html>

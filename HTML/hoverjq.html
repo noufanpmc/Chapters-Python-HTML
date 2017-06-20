@@ -4,12 +4,12 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
-    $("#para").mouseleave(function(){
-       alert('You hovered out');
+    $("#para").hover(function(){
+       alert('You hovered in');
 
-   /* } function(){
-    		alert('You hovered in');
-    	});*/
+    }, function(){
+    		alert('You hovered out');
+    
     });
 
 });
